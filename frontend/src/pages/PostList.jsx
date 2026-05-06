@@ -6,7 +6,8 @@ import './PostList.css'
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
-  const date = new Date(dateStr)
+  // UTC로 명시적 변환
+  const date = new Date(dateStr.replace(' ', 'T') + 'Z')
   const now = new Date()
   const diff = now - date
   if (diff < 60000) return '방금 전'
