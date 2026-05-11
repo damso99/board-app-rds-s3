@@ -79,9 +79,9 @@ services:
       - board-network
 
 # ===== 볼륨 =====
-# volumes:
-#   mysql-data:
-#     name: board-mysql-data
+volumes:
+  mysql-data:
+    name: board-mysql-data
 
 # ===== 네트워크 =====
 networks:
